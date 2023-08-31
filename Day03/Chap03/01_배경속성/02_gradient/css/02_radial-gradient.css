@@ -1,0 +1,49 @@
+
+* { margin: 0; padding: 0; text-align: center; }
+
+.box {
+    width: 900px;
+    height: 600px;
+    margin: 50px auto;
+}
+
+/* 모양 */
+.ellipse {
+    background: 
+        radial-gradient(ellipse, #574b90 0%, white 50%, #c44569 100%);
+}
+
+.circle {
+    background: 
+        radial-gradient(circle, #f8a5c2 0%, white 50%, #63cdda 100%);
+}
+
+/* 사이즈 */
+.closest-corner {
+    background: 
+        radial-gradient(closest-corner at 60% 55%, blue, green, yellow, black);
+}
+
+.closest-side {
+    background: 
+        radial-gradient(closest-side at 60% 55%, blue, green, yellow, black);
+}
+
+.farthest-corner {
+    background: 
+        radial-gradient(farthest-corner at 60% 55%, blue, green, yellow, black);
+}
+
+.farthest-side {
+    background: 
+        radial-gradient(farthest-side at 60% 55%, blue, green, yellow, black);
+}
+
+
+/* 중첩(누적) 그라디언트 */
+.stacked-radial {
+    background: 
+        radial-gradient(circle at 50% 0, rgba(255,0,0, 0.5), rgba(255,0,0,0) 70%),
+        radial-gradient(circle at 7% 75%, rgba(0,0,255, 0.5), rgba(255,0,0,0) 70%),
+        radial-gradient(circle at 93% 75%, rgba(0,255,0, 0.5), rgba(255,0,0,0) 70%);
+}

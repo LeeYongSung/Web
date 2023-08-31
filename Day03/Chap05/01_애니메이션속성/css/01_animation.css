@@ -1,0 +1,25 @@
+
+* { margin: 0; padding: 0; }
+
+#ball {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;     /* 원모양 */
+    background-color: royalblue;
+    /* 애니메이션 */
+    /* 👩‍💻TODO: 여기에 작성해보세요:) */
+    animation-name: ;                   /* 애니메이션 이름 */
+    animation-duration: ;                 /* 재생시간 */
+    animation-timing-function: ;      /* 타이밍 함수 */
+    animation-iteration-count: ;           /* 반복 횟수 */
+}
+
+#ball h1 {
+    line-height: 200px;
+    color: white;
+    text-align: center;
+}
+
+/* 👩‍💻TODO: 여기에 작성해보세요:) */
+/* 애니메이션의 변경지점을 지정하는 속성 */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video - 동영상을 재생하는 태그</title>
+</head>
+<body>
+    <!-- 
+        video 태그 속성
+            - autoplay      : 자동재생
+            - controls      : 오디오 재생/볼륨 컨트롤 표시
+            - loop          : 반복재생
+            - preload       : 파일 미리 다운로드
+            - src           : 재생할 오디오 파일 경로
+            - volume        : 재생 볼륨 크기 (0.0 ~ 1.0)
+            - poster        : 썸네일 이미지
+            - muted         : 비디오의 오디오 음소거
+            - width/height  : 비디오 가로 세로 사이즈
+
+            - video format(파일포맷)    : mp4, webm, ogg
+            - MIME type (파일형식)      : video/mp4, video/webm, video/ogg
+     -->
+     <video src="video/video.mp4" autoplay controls width="1024" height="768"></video>
+
+     <hr>
+
+     <video width="1024" height="768">
+        <source src="video/video.mp4" type="video/mp4">
+        <source src="video/video.ogg" type="video/ogg">
+        <source src="video/video.webm" type="video/webm">
+     </video>
+
+     <hr>
+
+     <video src="video/video.mp4" autoplay controls width="1024" height="768" poster="img/poster.png"></video>
+</body>
+</html>

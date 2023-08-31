@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin collapse 현상</title>
+    <link rel="stylesheet" href="css/05_margin_collapse.css">
+</head>
+<body>
+    <h1>margin collapse 현상</h1>
+    <div class="container">
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+
+    <hr>
+
+    <h1>margin collapse 해결 - 1 padding</h1>
+    <div class="container">
+        <section class="solve-1"></section>
+        <section class="solve-1"></section>
+        <section class="solve-1"></section>
+    </div>
+
+    <hr>
+
+    <h1>margin collapse 해결 - 2 border</h1>
+    <div class="container">
+        <div class="solve-2">
+            <section></section>
+        </div>
+        <div class="solve-2">
+            <section></section>
+        </div>
+        <div class="solve-2">
+            <section></section>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>margin collapse 해결 - 3 마진을 한쪽 방향만</h1>
+    <div class="container">
+        <section class="solve-3"></section>
+        <section class="solve-3"></section>
+        <section class="solve-3"></section>
+    </div>
+</body>
+</html>

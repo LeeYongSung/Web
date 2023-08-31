@@ -1,0 +1,20 @@
+.container {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    border: 5px dashed orange;
+    margin: auto;
+}
+
+.item {
+    margin: 10px 20px 30px 40px;    /* top right bottom left */
+    /* margin: 10px 20px 30px; */         /* top [left, right] bottom */
+    /* margin: 10px 20px; */              /* [top, bottom] [left, right] */
+    /* margin: 10px; */                   /* All */
+
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 3px solid gray;
+    background-color: #ddd;
+}

@@ -1,0 +1,17 @@
+.container {
+    position: relative;
+    width: 1200px;
+    border: 5px dashed orange;
+    margin: auto;
+}
+
+section {
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 80px;
+    margin-bottom: 160px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border: 3px solid gray;
+}

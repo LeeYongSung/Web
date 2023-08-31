@@ -1,0 +1,137 @@
+
+.container { text-align: center; }
+
+.inner {
+    width: 70vw;            /* 보여지는 가로영역의 70% 비율로 적용 */
+    min-height: 70vh;       /* 보여지는 세로영역의 70% 비율로 적용 */
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+
+/* background-image */
+.back1 {
+    background-image: url(../img/aloha.png);
+}
+
+/* background-size, background-repeat */
+.back2 {
+    min-height: 190px;
+    background-image: url(../img/aloha.png);
+    background-size: 200px 190px;   /* 가로 세로 */
+    background-repeat: repeat-x;    /* x축으로만 이미지 반복 */
+}
+
+.back3 {
+    min-height: 600px;
+    background-image: url(../img/aloha.png);
+    background-size: 200px;
+    background-repeat: repeat-y;   /* y축으로만 이미지 반복 */
+}
+
+.back4 {
+    background-image: url(../img/aloha.png);
+    background-repeat: no-repeat;
+}
+
+/* background-position */
+.left {
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.center {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.right {
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.top-left {
+    background-size: 200px 190px;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.top-right {
+    background-size: 200px 190px;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.bottom-left {
+    background-size: 200px 190px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+.bottom-right {
+    background-size: 200px 190px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.top-center {
+    background-size: 200px 190px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.center-center {
+    background-size: 200px 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bottom-center {
+    background-size: 200px 190px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+body {
+    background-image: url(../img/aloha.png);
+    background-size: 200px 190px;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* 배경 이미지 고정 */
+} 
+
+.mint {
+    background-color: mediumspringgreen;
+}
+
+/* 
+    이미지를 2개이상 적용
+    : (,) 기호를 기준으로 속성값을 사용
+*/
+/* 
+    background-size
+    - px        : (width height)
+    - cover     : 이미지를 확대/축소해서 박스 가로 또는 세로 크기에 딱 맞게 채움
+    - contain    : 이미지 전체가 보이도록, 가로/세로 비율을 유지하여 크기 조정
+*/
+
+.classroom {
+    background-image: url(../img/aloha.png), url(../img/classroom.jpg);
+    background-size: contain, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, center;
+}
+
+/* 
+    background 단축 속성
+    - background-color
+    - background-image
+    - background-repeat
+    - background-attachment
+    - background-position / background-size
+    * 중간의 개별속성 값이 누락되어도 적용가능
+*/
+
+.short {
+    background: url(../img/aloha.png) no-repeat scroll left bottom / contain,
+                url(../img/classroom.jpg) no-repeat scroll center center / cover;
+}

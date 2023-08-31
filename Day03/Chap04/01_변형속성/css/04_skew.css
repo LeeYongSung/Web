@@ -1,0 +1,48 @@
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 1400px;
+    border: 3px dashed orange;
+    box-sizing: border-box;
+}
+
+.inner { text-align: center; }
+
+.box { 
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.item {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background-color: royalblue;
+    box-sizing: border-box;
+    transition: all 1s;
+}
+
+.absolute {
+    position: absolute;
+    background-color: white;
+    border: 2px dashed gray;
+    top: 30px;
+    left: 75px;
+    z-index: -1;
+}
+
+/* 
+    skew(deg)
+    +deg : 지정 각도만큼 시계방향으로 기울임
+    -deg : 지정 각도만큼 반시계방향으로 기울임
+*/
+
+
+/* 👩‍💻TODO: 여기에 작성해보세요:) */
+

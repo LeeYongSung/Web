@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: black;
+            height: 80px;
+        }
+        nav a {
+            text-decoration: none;
+            color : white;
+            float: left;
+            display: block;
+            width: 100px;
+            height: 100%;
+            padding: 10px 20px;
+            line-height: 60px;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: cornflowerblue;
+        }
+
+        section {
+            margin: 0 auto;
+            width: 1024px;
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 10px;
+            min-height: 200px;
+        }
+
+        footer {
+            background-color: lightgray;
+            min-height: 80px;
+        }
+        
+        footer .copy {
+            float: left;
+            line-height: 80px;
+            padding: 0px 20px;
+        }
+        footer .family {
+            float: right;
+            line-height: 80px;
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="http://naver.com">네이버</a>
+            <a href="http://kakao.com">카카오</a>
+            <a href="http://youtube.com">유튜브</a>
+        </nav>
+    </header>
+
+    <section>
+        <h1>My Page</h1>
+        <p>My page에 오신 걸 환영합니다~!</p>
+    </section>
+    <section>
+        <h1>2번째 섹션</h1>
+        <p>2번째 영역입니다~!</p>
+        <article>
+            꽃이 인생에 동력은 대한 풍부하게 물방아 반짝이는 피고 봄바람이다. 밝은 싶이 보배를 속잎나고, 인간이 그림자는 보내는 청춘의 것이다. 그들의 많이 싹이 쓸쓸하랴? 앞이 싹이 따뜻한 인도하겠다는
+            그들을 인생을 곳이 아니다. 봄날의 이 유소년에게서 이상이 청춘의 이상 별과 그들의 것이다. 얼마나 그것을 맺어, 가슴이 영락과 방지하는 것이다. 심장의 앞이 대한 청춘은 풀이 품에 소담스러운
+            사막이다. 구할 옷을 싸인 청춘의 온갖 약동하다. 실로 소리다.이것은 대한 있는 미인을 산야에 가는 피가 그리하였는가? 때에, 인생을 것은 튼튼하며, 온갖 꽃이 못할 유소년에게서 때까지 아니다.
+            없으면, 스며들어 그들은 인생에 얼마나 방황하였으며, 타오르고 것이다.
+        </article>
+    </section>
+    <section>
+        <h1>3번째 섹션</h1>
+        <p>3번째 섹셕입니다.</p>
+    </section>
+
+    <footer>
+        <p class="copy">Copyright  ALOHA CLASS. ALL Rights Reserved</p>
+        <p class="family">
+            <select name="family">
+                <option value="1">네이버</option>
+                <option value="2">카카오</option>
+                <option value="3">유튜브</option>
+            </select>
+        </p>
+    </footer>
+</body>
+</html>

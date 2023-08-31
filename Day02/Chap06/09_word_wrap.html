@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 여기에 작성해보세요:) */
+        .container  {
+            margin: auto;
+            width: 900px;
+            padding: 50px;
+            border: 1px solid gray;
+	    }
+        
+        p.test {
+            width: 160px;
+            border: 1px solid black;
+
+            /* 긴 단어를 다음 주로 넘김 */
+            word-wrap: break-word;
+
+            /* 줄바꿈 기준을 설정 */
+            /* 
+                keep-all : 단어 기준으로 줄 바꿈
+                break-all : 글자 기준으로 줄 바꿈
+            */
+            word-break: keep-all;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="test">
+            매우 긴 단어가 있는 경우에 자동으로 잘라준다.
+            하하하ㅏ하하하하ㅏ하하하하ㅏ하하하하ㅏ하하ㅏ핳
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            This is HTML, CSS, JavaScript
+        </p>
+    </div>
+
+</body>
+</html>

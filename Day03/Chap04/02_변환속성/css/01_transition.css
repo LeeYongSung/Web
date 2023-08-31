@@ -1,0 +1,112 @@
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    border: 3px dashed orange;
+    box-sizing: border-box;
+}
+
+.transition1,
+.transition2,
+.transition3 {
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+}
+
+.transition1 { transition: width 2s; }
+.transition1:hover { width: 600px; }
+
+.transition2 { transition: height 2s; }
+.transition2:hover { height: 600px; }
+
+.transition3 { transition: width 1s, height 2s; }
+.transition3:hover { width: 800px; height: 400px }
+
+.transition4,
+.transition5,
+.transition6,
+.transition7,
+.transition8 {
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+}
+
+
+.transition4:hover,
+.transition5:hover,
+.transition6:hover,
+.transition7:hover,
+.transition8:hover {
+    width: 1200px;
+    transition-duration: 3s;
+}
+
+/* 👩‍💻TODO: 여기에 작성해보세요:) */
+.transition4 { 
+    /* linear : 일정한 속도로 변환 */
+
+}
+.transition5 {
+    /* ease : 처음에는 아주 빠르고 마지막에 느려짐 */
+    
+}
+.transition6 {
+    /* ease-in : 천천히 가다가 마지막에 조금 빨라짐 */
+
+}
+.transition7 {
+    /* ease-out : 약간 일정하게 가다가 마지막에 느려짐 */
+    
+}
+.transition8 {
+    /* ease-in-out : 느리게 가다가 중간에 빨라지다가 마지막에 다시 느려짐 */
+    
+}
+
+.transition9 {
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    transition-delay: 3s;
+    transition-duration: 2s;
+}
+
+.transition9:hover { width: 1200px; }
+
+
+.transition10 {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    transition-duration: 2s;
+
+    /* 3차 베지어 곡선을 이용한 변환속도를 지정하는 함수 */
+    /* 👩‍💻TODO: 여기에 작성해보세요:) */
+}
+
+.transition10:hover { width: 1200px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

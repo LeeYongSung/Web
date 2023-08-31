@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼 링크 - anchor</title>
+    <style>
+        a {
+            text-decoration: none;
+            color :inherit;     
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        a 태그
+
+        * 속성
+            - href  :   이동할 경로(파일경로, URL, id속성)
+            - 경로
+                * 절대 경로 : href="http://www.naver.com"   다른 웹 사이트로 이동
+                * 상대 경로 : href="../../test.html"        상위 경로의 다른 문서로 이동
+                * 문서 내부 : href="#text"                  id 속성이 text인 요소로 이동
+
+                *) ../ : 상위 경로
+                    ./ : 현재 경로
+
+                - target
+                    * _blank        : 새 창에서 열기
+                    * _self         : 현재 창에서 열기
+                    * _parent       : 부모 프레임에서 열기
+                    * _top          : 최상위 프레임에서 열기
+     -->
+    <a href="http://www.naver.com" target="_blank">네이버 (새 창)</a>
+    <a href="http://www.naver.com" target="_self">네이버 (현재 창)</a>
+    <a href="#bottom" id="top">맨 아래로 이동</a>
+
+    <div style="height: 1000px;"></div>
+
+    <p>
+        연락처 <br>
+        <!-- 이메일 링크 (mailto : [이메일주소]) -->
+        <a href="mailto:wwwaloha@kakao.com">wwwaloha@kakao.com</a>
+    </p>
+
+    <p>
+        전화 <br>
+        <!-- 전화 링크 (tel : [전화번호]) -->
+        <a href="tel:01012341234">010-1234-1234</a>
+    </p>
+
+    <a href="#top" id="bottom"> 맨 위로 이동</a>
+</body>
+</html>

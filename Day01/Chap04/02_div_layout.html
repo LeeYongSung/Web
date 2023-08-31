@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레이아웃</title>
+    <style>
+        /* (선택자) { 스타일속성 : 속성값 } */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .left-side {
+            float: left;
+            background-color: #aaa;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+        }
+        .main {
+            float: left;
+            background-color: #bbb;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+        }
+        .right-side {
+            float: left;
+            background-color: #ccc;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            height: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>HEADER</h2>
+    </div>
+
+    <div class="container">
+        <div class="left-side">Left Side</div>
+        <div class="main">Main</div>
+        <div class="right-side">Right-side</div>
+    </div>
+
+    <div class="footer">
+        <p>FOOTER</p>
+    </div>
+</body>
+</html>

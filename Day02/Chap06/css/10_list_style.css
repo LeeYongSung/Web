@@ -1,0 +1,64 @@
+.container {
+    width: 960px;
+    min-height: 400px;
+    margin: 0 auto;
+    border: 3px dashed orange;
+}
+
+/* clearfix */
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.left { float: left; width: 50%;}
+.right { float: right; width: 50%;}
+
+/* 
+    list-style-type
+    : 마커(기호) 유형을 지정하는 속성
+*/
+ul.a {list-style-type: circle;      /* lstc */ }
+ul.b {list-style-type: disc;        /* lstd */ }
+ul.c {list-style-type: square;      /* lstc */ }
+ul.none {list-style-type: none;     /* lstn */ }
+
+ol.a {list-style-type: lower-alpha;}
+ol.b {list-style-type: upper-alpha;}
+ol.c {list-style-type: lower-roman;}
+ol.d {list-style-type: upper-roman;}
+ol.e {list-style-type: decimal;}
+ol.f {list-style-type: decimal-leading-zero;}
+ol.none {list-style-type: none;}
+
+/* list-style-position */
+
+
+.inside, .outside {
+    list-style-image: url(../img/coffee-cup.png);
+}
+
+.inside {list-style-position: inside;}
+.outside {list-style-position: outside;}
+
+/* list=style-image */
+.check {list-style-image: url(../img/check.png);}
+.cancle {list-style-image: url(../img/cancel.png);}
+
+/* 
+    list-style (단축속성)
+    - [list-style-type]
+    - [list-style-position]
+    - [lsit-style-image]
+*/
+
+ul.menu {
+    list-style: none outside url(../img/coffee-cup\ \(1\).png);
+}
+
+ul.menu li {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 30px 8px;
+}

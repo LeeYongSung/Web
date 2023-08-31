@@ -1,0 +1,34 @@
+.container  {
+    width: 960px;
+    min-height: 400px;
+    margin: 0 auto;
+    border: 3px dashed orange;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+    width: 400px;
+    height: 150px;
+    border: 2px dashed black;
+    margin-bottom: 300px;
+}
+
+.box1 {overflow: visible;}
+.box2 {overflow: hidden;}
+.box3 {overflow: scroll;}
+.box4 {overflow: auto;}
+
+/* 
+    overflow-x
+    : 가로영역(x축) 기준으로 넘치는 컨테츠 처리 유형을 지정
+
+    overflow-y
+    : 세로영역(y축) 기준으로 넘치는 컨텐츠 처리 유형을 지정
+*/
+
+/* * {
+    overflow-y: hidden; 
+    overflow-x: hidden;
+} */

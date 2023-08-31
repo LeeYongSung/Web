@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+h1 {
+    font-size: 2.5rem;
+    color: #25a9bd;
+}
+
+section {
+    padding: 10px;
+    border: 2px solid yellow;
+}
+
+/* :first-of-type - 가장 처음 요소를 선택 */
+section:first-of-type {
+    color: #bc1212;
+}
+
+/* :last-of-type - 가장 마지막 요소를 선택 */
+/* ::first-letter - 첫 글자를 선택 */
+section:last-of-type::first-letter {
+    font-size: 2.4em;
+    float: left;
+    padding: 0 2px;
+    margin: -1px 3px 0 0;
+    font-weight: bold;
+    color: #f00;
+}
+
+section em {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*  :before
+    요소가 시작되기 전 */
+    section em::before {
+    content: "\"";
+    padding-right: 0.5em;
+}
+
+/* :after
+    요소가 끝난 다음 */
+    section em:after {
+    content: "\"";
+    padding-left: 0.5em;
+}
+
+
+form label {
+    width: 100px;
+    display: inline-block;
+}
+
+form input {
+    height: 1.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px 5px;
+    outline: none;
+}
+
+/* :enabled
+    활성화된 태그를 선택
+*/
+    input:enabled {
+    background-color: #beffff;
+}
+
+/* :focus
+    커서로 지정된 태그를 선택
+*/
+    input:focus {
+    background-color: #82f9b7;
+
+}
+
+/*  :disabled
+    비활성화된 태그를 선택
+    */
+    input:disabled {
+    background-color: #c9c9c9;
+}
+

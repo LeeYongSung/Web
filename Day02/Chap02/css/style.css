@@ -1,0 +1,12 @@
+h1 {
+    color: red;
+}
+
+h2 {
+    font-style: italic;
+}
+
+ul {
+    font-weight: lighter;
+    list-style: none;
+}

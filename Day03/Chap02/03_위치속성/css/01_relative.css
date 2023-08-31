@@ -1,0 +1,45 @@
+
+h1 { text-align: center; }
+
+.container {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    border: 5px dashed orange;
+    margin: auto;
+}
+
+.container div {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 48px;
+    border-radius: 10%;
+}
+
+/* position : relative; */
+.container .relative {
+    position: relative;             /* 초기 위치를 기준으로 위치 설정 */
+    border: 3px solid black;
+}
+
+/* 초기위치 */
+.container .absolute {
+    position: absolute;
+    border: 3px dashed #ddd;
+    color: #ddd;
+    z-index: -1;
+}
+
+.first { left: 100px; }
+.second { right: 100px;}
+.third { top: 100px; left: 200px; }
+.fourth { bottom: 100px; right: 200px; }
+
+.fifth { top: 0; left: 500px; }
+.sixth { top: 200px; left: 500px; }
+.seventh { top: 400px; left: 500px; }
+.eighth { top: 600px; left: 500px; }

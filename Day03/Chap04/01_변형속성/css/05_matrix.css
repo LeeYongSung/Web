@@ -1,0 +1,54 @@
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 1400px;
+    border: 3px dashed orange;
+    box-sizing: border-box;
+}
+
+.inner { text-align: center; }
+
+.box { 
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.item {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background-color: royalblue;
+    box-sizing: border-box;
+    transition: all 1s;
+}
+
+.absolute {
+    position: absolute;
+    background-color: white;
+    border: 2px dashed gray;
+    top: 30px;
+    left: 75px;
+    z-index: -1;
+}
+
+/* 
+    matrix()
+    : 6개의 값을 지정하여 요소를 변형
+    matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )
+
+*/
+
+/* 👩‍💻TODO: 여기에 작성해보세요:) */
+.matrix1:hover {
+
+}
+
+.matrix2:hover {
+    
+}

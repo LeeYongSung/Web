@@ -1,0 +1,42 @@
+
+* { margin: 0; padding: 0; text-align: center; }
+
+.box {
+    height: 200px;
+    margin: 50px;
+}
+
+.bottom {
+    background: linear-gradient(to bottom, yellow, orange, red);
+}
+.top {
+    background: linear-gradient(to top, yellow, orange, red);
+}
+.left {
+    background: linear-gradient(to left, yellow, orange, red);
+}
+.right {
+    background: linear-gradient(to right, yellow, orange, red);
+}
+
+.instar {
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
+}
+
+.top-left {
+    background: linear-gradient(to top left, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
+}
+
+.top-right {
+    background: linear-gradient(to top right, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
+}
+
+.bottom-left {
+    background: linear-gradient(to bottom left, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
+}
+
+.bottom-right {
+    background: linear-gradient(to bottom right, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
+}

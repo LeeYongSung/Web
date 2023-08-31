@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+/* TODO: 여기에 작성해보세요 */
+table.first {
+    width: 100%;
+    border-radius: 8px;
+    border-collapse: collapse;
+    box-shadow: 5px 5px 5px #aaa;
+    overflow: hidden;
+}
+
+table.first th {
+    padding: 8px;
+    background-color: cornflowerblue;
+    color: white;
+    letter-spacing: 3px;
+}
+
+/* th 태그 중 2번째 요소를 선택 */
+table.first th:nth-child(2) {
+    letter-spacing: 45px;
+    text-align: center;
+}
+
+table.first td {
+    padding: 10px;
+    text-align: center;
+}
+/* 자식요소 중 홀수인 요소만 선택 */
+table.first tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+/* 자식요소 중 짝수인 요소만 선택 */
+table.first tr:nth-child(even) {
+    background-color: aliceblue;
+}
+
+table.first td:first-child {
+    width: 10%;
+}
+
+table.first td:nth-child(2) {
+    width: 70%;
+}
+
+table.first td:last-child {
+    width: 20%;
+}
+
+table.first th, table.first td {
+    border-left: 1px solid #ccc;
+}
+/* TODO: 여기에 작성해보세요 */
+
+/* :hover
+    마우스가 요소에 올라가있는 상태 */
+table.first tr:hover {
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+
+}
+
+/* :empty
+    내용이 없는 상태
+*/
+p:empty {
+    margin: 100px;
+}
+
+table.second {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.second th {
+    padding: 8px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+
+table.second td {
+    padding: 10px;
+    text-align: center;
+}
+
+table.second td:first-of-type { width: 15%; }
+table.second td:nth-of-type(2) { width:  65%; }
+table.second td:last-of-type { width: 20%; }
+
+/* part1 : nth-of-type */
+/* nth-of-type 류는 지정한 요소들끼리마 순서를 카운팅한다. */
+section.part1 div:first-of-type {
+    background-color: cornflowerblue;
+}
+section.part1 div:nth-of-type(2) {
+    background-color: coral;
+}
+section.part1 div:last-of-type {
+    background-color: lightseagreen;
+}
+section.part1 div:nth-last-of-type(2) {
+    background-color: mediumslateblue;
+}
+
+/* part2 : nth-child */
+/* nth-child 류는 자식요소 전체를 기준으로 순서를 카운트한다. */
+section.part2 div:first-child {
+    background-color: cornflowerblue;
+}
+section.part2 div:last-child {
+    background-color: lightseagreen;
+}
+section.part2 div:nth-child(2) {
+    background-color: coral;
+}
+section.part2 div:nth-last-child(2) {
+    background-color: mediumslateblue;
+}
+
+

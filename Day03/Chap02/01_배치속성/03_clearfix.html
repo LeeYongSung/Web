@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearfix</title>
+    <link rel="stylesheet" href="css/03_clearfix.css">
+</head>
+<body>
+    <div class="container">
+        <h1>clear - : after</h1>
+        <!-- :ager : 문장의 마지막 영역에 가상요소를 지정하는 가상선택자 -->
+        <div class="inner">
+            <div class="item left"></div>
+            <div class="item right"></div>
+            <!-- 
+                :after
+                - 여기서 clear 속성을 적용하여,
+                다음요소에 영향을 미치는 것을 방지
+             -->
+        </div>
+        <div class="item next"></div>
+    </div>
+</body>
+</html>

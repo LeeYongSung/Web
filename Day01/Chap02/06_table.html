@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table - 표 형태의 데이터를 표시하는 태그</title>
+</head>
+<body>
+    <!-- 
+        table
+            - tr (table row)        : 표의 하나의 행을 표시
+            - th (table head)       : 표의 제목 행(header)의 열(data) 표시,
+                                      * 텍스트를 bold체로 가운데 정렬
+            - td (table data)       : 표의 한 칸의 열(data)을 표시
+
+            * rowspan               : 상하(행)의 셀을 병합, 
+            * colspan               : 좌우(열)의 셀을 병합,
+                * 병합할 첫 번째 셀을 기준으로 셀의 개수를 지정
+
+            - caption               : 표의 제목
+            - border                : 표의 테두리 굵기(px) 지종
+
+            - thead                 : 테이블 최상단의 영역을 지정
+            - tbody                 : 테이블 몸체 영역을 지정
+            - tfoot                 : 테이블 최하단의 영역을 지정
+
+            -colgroup               : 열 그룹을 지정하여 하나 이상의 열에 동일한 형식을 지정하기 위해 사용
+                - col               : 그룹화된 열을 나타내기 위해 사용
+
+     -->
+     <h1>카페 메뉴판</h1>
+     <table border="1">
+        <tr>
+            <th width="200">menu</th>
+            <th width="100">price</th>
+            <th width="100">hot/ice</th>
+        </tr>
+        <tr>
+            <td>아메리카노</td>
+            <td align="center">2,500</td>
+            <td align="center">hot/ice</td>
+        </tr>
+        <tr>
+            <td>카페모카</td>
+            <td align="center">3,500</td>
+            <td align="center">hot/ice</td>
+        </tr>
+        <tr>
+            <td>자바침 프라프치노</td>
+            <td align="center">5,500</td>
+            <td align="center">hot/ice</td>
+        </tr>
+     </table>
+
+     <hr>
+
+     <table border="1">
+        <caption>영화관 좌석표</caption>
+        <!-- tr>(th[width="100"]{$열}*3) -->
+        <tr>
+            <th width="100">1열</th>
+            <th width="100">2열</th>
+            <th width="100">3열</th>
+        </tr> 
+        <!-- (tr>(td*3))*3 -->
+        <tr>
+            <td rowspan="2">1 + 4</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <!-- <td>6</td> -->
+        </tr>
+        <tr>
+            <td colspan="3">7 + 8 + 9</td>
+            <!-- <td>8</td> -->
+            <!-- <td>9</td> -->
+        </tr>
+     </table>
+
+     <hr>
+
+     <h1>월별 수입</h1>
+     <table border="1">
+        <thead>
+            <tr>
+                <th>월별</th>
+                <th>수업</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08월</td>
+                <td>1,000,000</td>
+            </tr>
+            <tr>
+                <td>09월</td>
+                <td>1,500,000</td>
+            </tr>
+            <tr>
+                <td>10월</td>
+                <td>2,000,000</td>
+            </tr>
+            <tr>
+                <td>11월</td>
+                <td>2,500,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>합계</td>
+                <td>7,000,000</td>
+            </tr>
+        </tfoot>
+     </table>
+
+     <hr>
+
+     <table>
+        <colgroup> 
+            <col style="background-color: red;">
+            <col span="6" style="background-color: aqua;">
+        </colgroup>
+        <tr>
+            <th>일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+     </table>
+</body>
+</html>

@@ -1,0 +1,63 @@
+.container {
+    width: 960px;
+    min-height: 400px;
+    margin: 0 auto;
+    border : 3px dashed orange;
+}
+
+li {
+    /* display: inline; */  /* width, height 적용이 안 됨 */
+    display: inline-block;  /* width, height 적용 됨 */
+    /* inline       : 크기X, 여백O, 한 줄에 나란히 배치 */
+    /* block        : 크기O, 여백X, 세로로 쌓여서 배치 */
+    /* inline-vlock : 크기O, 여백O, 한 줄에 나란히 배치 */
+    width: 150px;
+    line-height: 50px;
+    padding: 10px 20px;
+    text-align: center;
+}
+li:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+/* 화면에 보이지 않게 지정 */
+.none { display: none; }
+.hidden { visibility: hidden; }
+
+/* grid */
+.grid-container {
+    display: grid;
+    /* 
+        grid-template-columns
+        - Grid 레이아웃의 열의 크기를 지정하는 속성
+        (여기서는 3개의 열의 크기를 auto로 지정)
+    */
+    grid-template-columns: auto auto auto;
+    background-color: royalblue;
+    padding: 10px;
+}
+
+.item {
+    background-color: lightblue;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+.item img {width: 100%; }
+
+/* flex */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+.flex-container .item {
+    width: calc(100%/3 - 10px);
+    height: auto;
+    box-sizing: border-box;
+}
