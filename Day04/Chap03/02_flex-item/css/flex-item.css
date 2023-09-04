@@ -1,0 +1,61 @@
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    border: 3px dashed orange;
+}
+
+/* container * item */
+.flex-container {
+    display: flex;
+    border: 1px solid lightcoral;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* order */
+.order-1 { order: -1; }
+.order1 { order: 1; }
+.order2 { order: 2; }
+.order3 { order: 3; }
+.order4 { order: 4; }
+
+
+/* flex-grow */
+.grow1 { flex-grow: 1; }
+.grow2 { flex-grow: 2; }
+
+/* flex-shrink */
+.shrink1 { flex-shrink: 1; width: 800px; }
+.shrink2 { flex-shrink: 2; width: 800px; }
+
+/* flex-basis */
+.basis100 { flex-basis: 100px; }
+.basis200 { flex-basis: 200px; }
+.basis300 { flex-basis: 300px; }
+
+/* flex */
+/* [flex-grow] [flex-shrink] [flex-basis] */
+.flex1 { flex: 1 1 200px; }
+.flex2 { flex: 2 2 300px; }
+
+/* align-self */
+.align-self { height: 600px; }
+
+.self-start { align-self: flex-start; }
+.self-center { align-self: center; }
+.self-end { align-self: flex-end; }
+.self-stretch { align-self: stretch; height: auto; }
+.self-base { align-self: baseline; }
+

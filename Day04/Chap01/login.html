@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- 전체 영역 -->
+    <div class="container">
+        <!-- 로그인 영역 (입력 폼)-->
+        <form action="login" method="post">
+            <!-- 로그인 박스 -->
+            <div class="login-wrap">
+                <!-- 중첩박스 -->
+                <div id="login">
+                    <!-- 로고 -->
+                    <div class="login-logo">
+                        <img src="img/logo.png" alt="로고이미지">
+                    </div>
+                    <!-- 아이디 -->
+                    <div class="login_inputbox">
+                        <input type="text" name="id" placeholder="아이디">
+                        <span class="border"></span>        <!-- 밑줄선 -->
+                    </div>
+                    <!-- 비밀번호 -->
+                    <div class="login_inputbox">
+                        <input type="password" name="pw" placeholder="비밀번호">
+                        <span class="border"></span>        <!-- 밑줄선 -->
+                    </div>
+                    <!-- 아이디저장/자동로그인 -->
+                    <div class="login-remember">
+                        <label for="remeber-id">
+                            <input type="checkbox" name="remeber-id" id="remeber-id">
+                            <span class="checkmark"></span>
+                            <span>아이디저장</span>
+                        </label>
+                        <label for="remeber-me">
+                            <input type="checkbox" name="remeber-me" id="remeber-me">
+                            <span class="checkmark"></span>
+                            <span>자동로그인</span>
+                        </label>
+                    </div>
+                    <!-- 버튼(로그인/회원가입) -->
+                    <div class="login-btnbox">
+                        <a href="#" class="login-btn">로그인</a>
+                    </div>
+                    <div class="login-btnbox">
+                        <a href="#" class="login-btn">회원가입</a>
+                    </div>
+                    <!-- 카피라이트 -->
+                    <div class="copy">
+                        <p>copyright&copy; 2024 ALOHA CLASS. All right reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

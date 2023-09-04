@@ -47,23 +47,23 @@
 /* 👩‍💻TODO: 여기에 작성해보세요:) */
 .transition4 { 
     /* linear : 일정한 속도로 변환 */
-
+    transition-timing-function : linear;
 }
 .transition5 {
     /* ease : 처음에는 아주 빠르고 마지막에 느려짐 */
-    
+    transition-timing-function : ease;
 }
 .transition6 {
     /* ease-in : 천천히 가다가 마지막에 조금 빨라짐 */
-
+    transition-timing-function : ease-in;
 }
 .transition7 {
     /* ease-out : 약간 일정하게 가다가 마지막에 느려짐 */
-    
+    transition-timing-function : ease-out;
 }
 .transition8 {
     /* ease-in-out : 느리게 가다가 중간에 빨라지다가 마지막에 다시 느려짐 */
-    
+    transition-timing-function : ease-in-out;
 }
 
 .transition9 {
@@ -85,6 +85,7 @@
 
     /* 3차 베지어 곡선을 이용한 변환속도를 지정하는 함수 */
     /* 👩‍💻TODO: 여기에 작성해보세요:) */
+    transition-timing-function: cubic-bezier(0,1.98,1,-0.89);
 }
 
 .transition10:hover { width: 1200px; }

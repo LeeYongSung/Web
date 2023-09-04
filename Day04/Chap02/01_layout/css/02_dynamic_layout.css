@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header, footer { width: 100%; }
+nav, section { float: left; height: 700px; line-height: 700px;}
+
+nav {
+    width: 20%;
+    margin-right: 1.5%;
+}
+section {
+    width: 78.5%;
+}
+footer {
+    clear: both;
+}
+
+header, nav, section, footer {
+    padding: 20px 0;
+    border: 1px solid black;
+}

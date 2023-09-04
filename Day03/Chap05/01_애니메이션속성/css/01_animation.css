@@ -6,13 +6,13 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;     /* 원모양 */
-    background-color: royalblue;
+    background-color: cornflowerblue;
     /* 애니메이션 */
     /* 👩‍💻TODO: 여기에 작성해보세요:) */
-    animation-name: ;                   /* 애니메이션 이름 */
-    animation-duration: ;                 /* 재생시간 */
-    animation-timing-function: ;      /* 타이밍 함수 */
-    animation-iteration-count: ;           /* 반복 횟수 */
+    animation-name: ball;                   /* 애니메이션 이름 */
+    animation-duration: 4s;                 /* 재생시간 */
+    animation-timing-function: linear;      /* 타이밍 함수 */
+    animation-iteration-count: 5;           /* 반복 횟수 */
 }
 
 #ball h1 {
@@ -23,3 +23,12 @@
 
 /* 👩‍💻TODO: 여기에 작성해보세요:) */
 /* 애니메이션의 변경지점을 지정하는 속성 */
+@keyframes ball {
+    /* 시작지점 - form or 0% */
+    /* 종료지점 - to or 100% */
+    0% { left: 0; }
+    25% { transform: translateY(500px);}
+    50% {left : 100%; transform: rotate(360deg);}
+    75% {}
+    100% {left : 0;}
+}

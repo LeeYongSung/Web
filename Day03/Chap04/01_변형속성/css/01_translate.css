@@ -46,12 +46,12 @@
 */
 
 /* 👩‍💻TODO: 여기에 작성해보세요:) */
-.translate1:hover {  }
-.translate2:hover {  }
-.translate3:hover {  }
+.translate1:hover { transform : translate(45px, 45px); }
+.translate2:hover { transform : translateX(45px); }
+.translate3:hover { transform : translateY(45px); }
 
-.translate4:hover {  }
-.translate5:hover {  }
-.translate6:hover {  }
+.translate4:hover { transform : translate(-45px, -45px); }
+.translate5:hover { transform : translateX(-45px); }
+.translate6:hover { transform : translateY(-45px); }
 
 

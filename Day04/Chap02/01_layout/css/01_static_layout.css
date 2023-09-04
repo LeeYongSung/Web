@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header, footer { width: 960px; }
+nav, section { float: left; height: 700px; line-height: 700px;}
+
+nav {
+    width: 200px;
+    margin-right: 10px;
+}
+section {
+    width: 750px;
+}
+footer {
+    clear: both;
+}
+
+header, nav, section, footer {
+    padding: 20px 0;
+    border: 1px solid black;
+}

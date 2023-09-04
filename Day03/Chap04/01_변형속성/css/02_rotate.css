@@ -44,16 +44,16 @@
 */
 
 /* 👩‍💻TODO: 여기에 작성해보세요:) */
-.rotate1:hover {  }
-.rotate2:hover {  }
-.rotate3:hover {  }
-.rotate4:hover {  }
+.rotate1:hover { transform: rotate(45deg); }
+.rotate2:hover { transform: rotateX(45deg); }
+.rotate3:hover { transform: rotateY(45deg); }
+.rotate4:hover { transform: rotateZ(45deg); }
 
 
-.rotate5:hover {  }
-.rotate6:hover {  }
-.rotate7:hover {  }
-.rotate8:hover {  }
+.rotate5:hover { transform: rotate(-45deg); }
+.rotate6:hover { transform: rotateX(-45deg); }
+.rotate7:hover { transform: rotateY(-45deg); }
+.rotate8:hover { transform: rotateZ(-45deg); }
 
 
 .rotate9:hover { 

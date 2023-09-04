@@ -1,0 +1,179 @@
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 3px dashed hotpink;
+    margin-bottom: 500px;
+    padding-bottom: 500px;
+}
+
+/* grid */
+.grid-container {
+    display: grid;
+    border: 1px solid lightcoral;
+}
+
+.item {
+    width: calc(100%-20px);
+    height: calc(100%-20px);
+    margin: 20px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1;
+    background-color: cornflowerblue;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+/* grid-template-rows */
+.rows-px { grid-template-rows: 100px 200px 300px;}
+.rows-fr { grid-template-rows: 1fr 2fr 1fr;}
+.rows-mix { grid-template-rows: 1fr 2fr 100px;}
+.rows-name { grid-template-rows: [row1] 100px [row2] 150px [row3] 200px;}
+.rows-repeat { grid-template-rows: repeat(3, 200px); }
+
+
+/* grid-template-columns */
+.columns-px { grid-template-columns: 100px 200px 300px;}
+.columns-fr { grid-template-columns: 1fr 2fr 1fr;}
+.columns-mix { grid-template-columns: 1fr 2fr 100px;}
+.columns-name { grid-template-columns: [row1] 100px [row2] 150px [row3] 200px;}
+.columns-repeat { grid-template-columns: repeat(3, 200px); }
+
+
+/* grid-template-areas */
+
+/* grid-area : 영역의 이름을 지정하는 속성 */
+.grid-header { grid-area: header; }
+.grid-main { grid-area: main; }
+.grid-footer { grid-area: footer; }
+
+.grid-template-areas {
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+/* grid-template */
+.grid-template {
+    grid-template: 
+        "header header header" 100px
+        "main main main" 200px
+        "footer footer footer" 150px
+        / 100px 200px 300px
+    ;
+}
+
+/* gap */
+.row-gap { row-gap: 100px; }
+.column-gap { column-gap: 200px; }
+.gap { gap: 100px 200px; }
+
+/* auto */
+.auto-rows { grid-auto-rows: 300px; }
+.auto-columns { grid-auto-columns: 300px; }
+.auto-item { background-color: mediumslateblue; }
+
+
+/* grid column */
+/* 3n-2 : 1, 4, 7, ... */
+/* 3n-1 : 2, 5, 8, ... */
+/* 3n   : 3, 6, 9, ... */
+.auto-columns .item:nth-child(3n-2) { grid-column: 1/2; }
+.auto-columns .item:nth-child(3n-1) { grid-column: 2/3; }
+.auto-columns .item:nth-child(3) { grid-column: 3/4; }
+
+.auto-columns .auto-item:nth-child(3n-2) { grid-column: 4/5; grid-row: 1/2; }
+.auto-columns .auto-item:nth-child(3n-1) { grid-column: 4/5; grid-row: 2/3;  }
+.auto-columns .auto-item:nth-child(3) { grid-column: 4/5; grid-row: 3/4; }
+
+/* grid-auto-flow */
+.auto-flow-row { grid-auto-flow: row; }
+.auto-flow-column { grid-auto-flow: column; }
+
+
+/* grid */
+/* [grid-template-rows] [grid-template-column] */
+.grid-rows-columns {
+    grid: 100px 200px / 1fr 3fr;
+    /* grid-template-rows: 100px 200px; */
+    /* grid-template-columns: 1fr 3fr; */
+}
+
+.grid-grid-template {
+    grid:
+        "header header header" 100px
+        "main main main" 200px
+        "footer footer footer" 150px
+        / 200px 300px 400px;
+}
+
+/* align-content */
+.align { height: 1000px; }
+.align-start { align-content: start; }
+.align-end { align-content: end; }
+.align-center { align-content: center; }
+.align-between { align-content: space-between; }
+.align-around { align-content: space-around; }
+.align-evenly { align-content: space-evenly; }
+.align-stretch { align-content: stretch; }
+
+/* justify-content */
+.justify { grid-auto-flow: column; }
+.justify-start { justify-content: start; }
+.justify-end { justify-content: end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+.justify-stretch { justify-content: stretch; }
+
+
+/* place-content */
+.place { height: 1000px; }
+.place-center-center {
+    place-content: center center;
+    /* align-content    justify-content */
+    /* 컨텐츠 수직정렬   컨텐츠 수평정렬 */
+}
+
+
+/* items */
+.items {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    background-color: cornflowerblue;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* align-items */
+.align-items-start { align-items: start; }
+.align-items-end { align-items: end; }
+.align-items-center { align-items: center; }
+.align-items-stretch { align-items: stretch; }
+.align-items-stretch .items { height: auto; }
+
+
+
+/* justify-items */
+.justify-items-start { justify-items: start; }
+.justify-items-end { justify-items: end; }
+.justify-items-center { justify-items: center; }
+.justify-items-stretch { justify-items: stretch; }
+.justify-items-stretch .items { width: auto; }
+
+
+/* place-items */
+.place-items-center {
+    place-items: center center;
+    /* align-items      justify-items */
+    /* 아이템 수직정렬    아이템 수평정렬 */
+}

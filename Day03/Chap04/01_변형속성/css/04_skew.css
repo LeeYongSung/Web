@@ -42,6 +42,9 @@
     +deg : 지정 각도만큼 시계방향으로 기울임
     -deg : 지정 각도만큼 반시계방향으로 기울임
 */
+.skew1:hover { transform: skew(45deg, 45deg); }
+.skew2:hover { transform: skewX(45deg); }
+.skew3:hover { transform: skewY(45deg); }
 
 
 /* 👩‍💻TODO: 여기에 작성해보세요:) */

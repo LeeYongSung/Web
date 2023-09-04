@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    border: 10px solid black;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    width: calc(800px * 3);
+    /* display: flex; */
+    animation-name: slide;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.slide img {
+    width: 800px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes slide {
+    0% {top: 0}
+    25% {top: -400px}
+    50% {top: -800px}
+    75% {top: -400px}
+    100% {top: 0}
+}

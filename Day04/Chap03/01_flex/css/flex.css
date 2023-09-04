@@ -1,0 +1,92 @@
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 3px dashed orange;
+}
+
+/* flex container */
+.flex-container {
+    display: flex;
+    border: 1px solid lightcoral;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+/* flex-direction */
+.row { flex-direction: row; }
+.column { flex-direction: column; }
+.row-reverse { flex-direction: row-reverse; }
+.column-reverse { flex-direction: column-reverse; }
+
+/* flex-wrap */
+.nowrap { flex-wrap: nowrap; }
+.wrap { flex-wrap: wrap; }
+.wrap-reverse { flex-wrap: wrap-reverse; }
+
+/* flex-flow */
+.row-wrap {
+    flex-flow: row wrap;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+}
+
+
+/* justify-content */
+/* : 주축의 정렬방식을 지정하는 속성 */
+.center { justify-content: center; }
+.start { justify-content: flex-start; }
+.end { justify-content: flex-end; }
+.between { justify-content: space-between; }
+.around { justify-content: space-around; }
+.evenly { justify-content: space-evenly; }
+
+/* 교차축 */
+.cross { height: 600px; }
+
+/* align-content */
+.content-stretch { align-content: stretch; }
+
+/* stretch - 적용될 item 의 width/height 가 auto 이어야 적용된다. */
+.content-stretch .item { height: auto; }
+
+.content-center { align-content: center; }
+.content-start { align-content: flex-start; }
+.content-end { align-content: flex-end; }
+.content-between { align-content: space-between; }
+.content-around { align-content: space-around; }
+
+
+/* align-items */
+.cross-center { align-items: center; }
+.cross-start { align-items: start; }
+.cross-end { align-items: end;}
+.cross-stretch { align-items: stretch; }
+.cross-stretch .item { height: auto; line-height: 100px; }
+.cross-baseline { align-items: baseline; }
+
+
+/* 정가운데 (수평 가운데/수직 가운데) */
+.center-center {
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-center .item { font-size: 14px; }
+
+
+
+
