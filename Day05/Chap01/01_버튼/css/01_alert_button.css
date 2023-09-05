@@ -1,0 +1,33 @@
+* {box-sizing: border-box;}
+.btn {
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn.lg {display: block; width: 100%; margin: 10px 0;}
+
+.success { background-color: #00bb48;}
+.success:hover { background-color: #018834; }
+.success:active {background-color: #075826;}
+
+.info { background-color: #548aff; }
+.info:hover { background-color: #3f67bd; }
+.info:active { background-color: #27427c; }
+
+.warning { background-color: #d6b600; }
+.warning:hover { background-color: #c5b314 ; }
+.warning:active { background-color: #7c710e; }
+
+.danger { background-color: #ff0000; }
+.danger:hover { background-color: #b30101 ; }
+.danger:active {background-color: #830505 ;}
+
+.default { background-color: #31cec1; }
+.default:hover { background-color: #74c0ba; }
+.default:active { background-color: #4e817d; }

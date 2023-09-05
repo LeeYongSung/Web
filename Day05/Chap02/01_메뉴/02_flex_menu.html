@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <!-- 폰트 어썸 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/02_flex_menu.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $( document ).ready( function() {
+            $(".menu-center>nav>ul>li").hover(function() {
+                $(".menu_bar").stop().slideDown();
+            }, function(){
+                $(".menu_bar").stop().slideUp();
+            });
+
+            $(".menu-right>.menu_icon").click(function(){
+                $(".mobile_menu").fadeIn();
+                $(".menu_icon").fadeOut();
+                $(".menu_close").fadeIn();
+            });
+            $(".menu-right>.menu_close").click(function(){
+                $(".mobile_menu").fadeOut();
+                $(".menu_icon").fadeIn();
+                $(".menu_close").fadeOut();
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <!-- util -->
+        <div class="util">
+            <ul class="util-menu">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+
+        <!-- menu -->
+        <div class="menu">
+            <div class="menu-left">
+                    <a href=""><i class="fa fa-user"></i></a>
+            </div>
+            <div class="menu-center">
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="board.html">Board</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-right">
+                <a href="#" class="menu_icon">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a href="#" class="menu_close">
+                    <i class="fa fa-close"></i>
+                </a>
+            </div>
+        </div>
+        <div class="menu_bar">
+            <ul class="main_menu">
+                <li>
+                    <ul class="sub_menu">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="sub_menu">
+                        <li><a href="#">board</a></li>
+                        <li><a href="#">board</a></li>
+                        <li><a href="#">board</a></li>
+                        <li><a href="#">board</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="sub_menu">
+                        <li><a href="#">gallery</a></li>
+                        <li><a href="#">gallery</a></li>
+                        <li><a href="#">gallery</a></li>
+                        <li><a href="#">gallery</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="sub_menu">
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">about</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile_menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Boarde</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div style="height: 4000px;"></div>
+</body>
+</html>
