@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머함수 - 시계</title>
+    <script>
+        setInterval( () => {
+            let timer = new Date();
+            let h = timer.getHours();
+            let m = timer.getMinutes();
+            let s = timer.getSeconds();
+            let time = `${h} : ${m} : ${s}`;
+
+            document.getElementById('time').innerHTML = time;
+            
+            // document.getElementById() : id로 html 요소를 가져오는 함수
+            // innerHTML : html 요소의 컨텐츠
+        }, 1000);
+    </script>
+</head>
+<body>
+    <h1 id="time"></h1>
+</body>
+</html>

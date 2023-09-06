@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전개연산자</title>
+    <script>
+
+        // 나머지 매개변수
+        function sample(...items) {
+            document.write(`items[0] : ${items[0]} <br>`);
+            document.write(`items[1] : ${items[1]} <br>`);
+            document.write(`items[2] : ${items[2]} <br>`);
+            document.write(`items[3] : ${items[3]} <br>`);
+        }
+
+        const arr = [1, 2, 3, 4];
+        // 전개 연산자
+        // : 배열의 요소를 하나씩 펼쳐서(전개) 전달한다.
+        sample(...arr);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

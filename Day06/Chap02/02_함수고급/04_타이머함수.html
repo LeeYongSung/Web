@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머 함수</title>
+    <script>
+        // setTimeout
+        // : 지정 시간 후에 콜백함수를 호출
+        // () => { }    : 화살표 함수
+        let timer1 = setTimeout( () => {
+            console.log(`3초가 지났습니다.`);
+            document.write(`3초가 지났습니다.<br>`)
+        }, 3000 );
+        
+        // setInterval
+        // : 지정 시간마다 콜백함수 호출
+        let count = 1;
+        let timer2 = setInterval( () => {
+            console.log(`${count} 초`);
+            document.write(`${count} 초 <br>`);
+            count++;
+        }, 1000);
+
+        // 설정한 타이머 제거
+        // clearTimeout( timer1 );
+        // clearInterval( timer2 );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

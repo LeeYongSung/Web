@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 정의와 호출</title>
+    <script>
+
+        // 익명함수();      - 함수 정의 전에 호출 불가
+        선언적함수();    // - 함수 정의 전에 호출 가능 (호이스팅)
+
+        // 익명 함수 정의
+        const 익명함수 = function() {
+            console.log('익명함수 호출!');
+        }
+
+        // 선언적 함수 정의
+        function 선언적함수() {
+            console.log('선언적함수 호출!');
+        }
+
+        // 함수 호출
+        익명함수();
+        선언적함수();
+
+        // 출력
+        console.log(typeof 익명함수);
+        console.log(익명함수);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

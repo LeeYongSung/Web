@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백 익명함수</title>
+    <script>
+        // 함수 선언
+        function callThreeTimes(callback) {
+            for (let i = 0; i < 3; i++) {
+                callback(i);
+            }
+        }
+
+        // 함수 호출
+        // : 익명함수도 '콜백함수'로 사용할 수 있다.
+        callThreeTimes(function (i) {
+            console.log(`${i}번째 함수 호출`);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+    <script>
+        // 함수 선언
+        function callThreeTimes(callback) {
+            for (let i = 0; i < 3; i++) {
+                callback(i);
+            }
+        }
+
+        function print(i) {
+            console.log(`${i}번째 함수 호출`)
+        }
+
+        // 함수 호출
+        // : 아래 'print'함수 처럼 전달인자로 전달되는 함수를 '콜백함수'라고 한다.
+        callThreeTimes(print);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

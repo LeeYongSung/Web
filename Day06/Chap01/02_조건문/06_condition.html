@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건부 연산자 - 삼항연산자</title>
+    <script>
+        let name = prompt('이름을 입력하세요.');
+
+        // 조건 연산자
+        // (조건) ? (참) : (거짓)
+
+        let check = (name == '김조은') ? true : false;
+
+        // 위의 조건 연산자를 if문으로 바꾸어 보세요.
+        if(name === '김조은') {
+            check = true;
+        } else {
+            check = false;
+        }
+        
+        if(check) {
+            alert('본인 입니다.')
+        } else {
+            alert(`입력된 이름은 ${name} 입니다.`)
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+    <script>
+        function test() {
+            var local = 10;     // 함수 범위
+
+            if(local > 0) {
+                let local = 20;     // 블록 범위
+                console.log(`local : ${local}`);
+            }
+            console.log(`local : ${local}`);
+        }
+        function test2() {
+            let local2 = 10;
+
+            if(local2 > 0) {
+                let local2 = 20;
+                console.log(`local2 : ${local2}`);
+            }
+            console.log(`local2 : ${local2}`);
+        }
+
+        test();
+        test2();
+        console.log(`test3 : ${test3}`);
+        var test3 = 'test';
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

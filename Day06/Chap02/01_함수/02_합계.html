@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수로 합계 구하기</title>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        document.write(`합계 : ${ sum(arr) }`);
+
+        // 합계를 구하는 함수
+        function sum(arr) {
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+
+            return sum;
+        }
+
+        /* 
+            선언적 함수 정의
+            - 함수정의가 함수호출보다 뒤에 있어도, 호출이 가능하다.
+            * Hoisting (호이스팅)
+            : 변수나 함수의 정의가 scope(범위)의 최상단으로 끌어올려지는 것
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

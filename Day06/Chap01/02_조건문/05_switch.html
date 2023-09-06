@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 - swich</title>
+    <script>
+        const input = prompt('숫자를 입력해주세요');
+
+        // switch(표현식) { case 값 : ~}
+        // : 표현식과 값이 일치하는 ccase 문으로 이동한다.
+
+        switch (input % 2) {
+            case 0:
+                    alert('짝수입니다.');
+                    break;
+            case 1:
+                    alert('홀수입니다.');
+                    break;
+            default:
+                    alert('숫자가 아닙니다.');
+                    break;
+        }
+        // break
+        // : 현재 속한 제어문(조건문, 반복문)을 벗어나는 키워드
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

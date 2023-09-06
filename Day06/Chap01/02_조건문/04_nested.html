@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 조건문</title>
+    <script>
+        // Date     : 날짜/시간 관련 객체
+        // new      : 객체 생성 키워드
+        const date = new Date();
+        // getHours()   : 현재 시간을 가져오는 함수
+        const hour = date.getHours();
+
+        if(hour < 12) {
+            alert('아침 식사 시간');
+        } else {
+            if(hour < 15 ) {
+                alert('점심 식사 시간');
+            } else {
+                alert('저녁 식사 시간');
+            }
+        }
+
+        // 중첩 if 문보다 단일 if 문을 사용할 것을 권장
+        if(hour < 12) {
+            alert('아침 식사 시간');
+        } else if(hour < 15 ) {
+            alert('점심 식사 시간');
+        } else {
+            alert('저녁 식사 시간');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 매개변수</title>
+    <script>
+        // 기본 매개변수
+        // : 인자가 전달되지 않았을 때,
+        //   기본값을 지정하는 매개변수
+        function pay(name, pay=9860, hours=40) {
+            document.write(`${name} 님의 급여 <br>`);
+            document.write(`시급 : ${pay} <br>`);
+            document.write(`시간 : ${hours} <br>`);
+            document.write(`급여 : ${pay * hours * 4} <br>`);
+            document.write(`<br>`);
+        }
+
+        pay('알바생');
+        pay('알바생', 6200);
+        pay('알바생', 15000, 80);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

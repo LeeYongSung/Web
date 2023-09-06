@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿 문자열</title>
+    <script>
+        const rate = 1331;
+
+        let dollar = prompt('환산할 달러를 입력하세요.');
+        let won = dollar * rate;
+
+        // 템플릿 문자열
+        // : 백틱기호(`) 안에 작성하고,
+        //    변수 등은 ${변수} 표현식 기호에 작성한다.
+        alert(`${dollar} 달러는 ${won} 원 입니다.`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

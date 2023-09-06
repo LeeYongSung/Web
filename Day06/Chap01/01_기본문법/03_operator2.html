@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자2</title>
+    <script>
+        let a = 10;
+        let b = '10';
+        let c = '10';
+        let d = 'test';
+        let e = 'test';
+        let f;  // undefined;
+
+        console.log('a == b : ' + (a==b) );
+        console.log('a === b : ' + (a===b) );
+
+        console.log('b == c : ' + (b==c) );
+        console.log('d == e : ' + (d==e) );
+
+        /* 
+            NaN : Not a Number
+                - 숫자 연산을 할 때, 유효한 숫자 데이터를 연산할 수 없는 경우에 반환
+        */
+        console.log(f + a);
+        console.log(f + b);  /* undefined -> 'undefined' + '10' */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

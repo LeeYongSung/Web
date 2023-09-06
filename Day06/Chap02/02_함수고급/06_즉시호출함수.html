@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즉시 호출 함수</title>
+
+    <!-- 외부 스크립트 -->
+    <script>
+        let pi = 3.14;
+        console.log(`원주율은 ${pi}입니다.`);
+    </script>
+
+    <!-- 내부 스크립트 -->
+    <script>
+        // 즉시 호출 함수 - 쉐도잉(같은 전역범위의 변수 충돌을 방지하는 것)
+        (function() {
+            let pi = 3.141592;
+            console.log(`원주율은 ${pi}입니다`);
+        }) ( );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

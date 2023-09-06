@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수로 평균 구하기</title>
+    <script>
+        
+        let arr = [1, 2, 3, 5, 7, 8];
+
+        document.write(`합계 : ${ sum(arr) } <br>`);
+        document.write(`평균 : ${ avg(arr).toFixed(2) }`);
+        // 숫자타입.toFixed() : 소수점을 나타내는 함수
+
+        function sum(arr) {
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+
+            return sum;
+        }
+
+        // 평균을 구하는 함수
+        function avg(arr) {
+            let avg = 0.0;
+            avg = sum(arr) / arr.length;
+            return avg;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

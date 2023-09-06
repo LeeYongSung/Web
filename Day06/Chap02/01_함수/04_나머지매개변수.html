@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나머지 매개변수</title>
+    <script>
+        // ...items : 나머지 매개변수
+        // - 가변적으로, 전달된 인자를 배열로 가져오는 매개변수
+
+        function sample(...items) {
+            console.log(items);
+            console.log(typeof items);
+
+            for (let i = 0; i < items.length; i++) {
+                console.log(items[i]);
+                document.write(items[i]);
+            }
+            document.write('<br>');
+        }
+        sample(1, 2);
+        sample(1, 2, 3);
+        sample(1, 2, 3, 4);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
