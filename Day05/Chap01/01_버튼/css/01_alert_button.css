@@ -7,7 +7,7 @@
     color: white;
     font-weight: bold;
     text-decoration: none;
-    text-align: center;
+    text-align: center; 
 }
 
 .btn.lg {display: block; width: 100%; margin: 10px 0;}

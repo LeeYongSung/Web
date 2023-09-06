@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 li {
-    list-style: none;
+    list-style: none; 
 }
 a {
     text-decoration: none;
