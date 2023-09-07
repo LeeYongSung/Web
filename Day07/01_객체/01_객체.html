@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <script>
+        // 객체 생성
+        /* 
+            {
+                속성1 : 값,
+                속성2 : 값,
+                
+                메소드명 : function() {
+
+                }
+            }
+        */
+
+        let name = '박조은';
+        let age = 30;
+
+        let person = {
+            // 속성(property)
+            name : '김조은',
+            age : 20,
+            // 메소드(method)
+            print : function() {
+                return this.name + ' : ' + this.age;    // this : 객체 자기 자신을 가리키는 키워드
+            }
+        }
+
+        document.write(person.name + ', ');
+        document.write(person.age + ', ');
+        document.write('<br>');
+        document.write(person.print());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

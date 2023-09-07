@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소</title>
+    <script>
+        
+        // 문서 준비 이벤트
+        document.addEventListener('DOMContentLoaded', () => {
+            let head = document.head;
+            let body = document.body;
+            let title = document.title;
+            let url = document.URL;
+            let aList = document.anchors;
+            let form = document.forms;
+            let img = document.images;
+
+            console.log(head);
+            console.log(body);
+            document.getElementById('title').innerHTML = title;
+            document.getElementById('url').innerHTML = url;
+            console.log(aList);
+            console.log(form);
+            console.log(form[0]);
+            console.log(form[1]);
+            console.log(img);
+            // img[0].src = 'X.jpg';
+            // form[0].submit();
+        });
+    </script>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <h3 id="url"></h3>
+    <ul>
+        <li><a href="http://www.naver.com" name="a">www.naver.com</a></li>
+        <li><a href="http://www.kakao.com" name="b">www.kakao.com</a></li>
+    </ul>
+
+    <form action=""></form>
+
+    <form action=""></form>
+
+    <!-- <img src="a.jpg" alt="">
+    <img src="X.jpg" alt=""> -->
+    <img src="" alt="">
+</body>
+</html>

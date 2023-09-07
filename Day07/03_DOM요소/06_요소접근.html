@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소접근</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $container = document.getElementsByClassName('container')[0];
+
+            // childNodes : 해당 요소의 자식 노드들
+            console.log($container.childNodes);
+            console.log($container.childNodes[1]);
+            console.log($container.childNodes[3]);
+
+            let $section1 = document.getElementsByTagName('section')[0];
+            console.log($section1.firstChild);
+            console.log($section1.childNodes[1]);
+            console.log($section1.lastChild);
+
+            console.log($section1.childNodes[1].previousSibling);
+            console.log($section1.childNodes[1].nextSibling);
+
+            /* 
+                parentNode          : 부모 노드
+                childNodes          : 자식 노드들
+                firstChild          : 첫번째 자식 노드
+                lastChild           : 마지막 자식 노드
+                previousSibling     : 이전 형제 노드
+                nextSibling         : 다음 형제 노드
+            */
+
+            /* 
+                노드 정보
+                - nodeName      : HTML 태그 이름을 대문자로 저장한 정보
+                - nodeValue     : 노드의 값
+                - nodeType      : 
+                                * 요소노드 : 1
+                                * 속성노드 : 2
+                                * 텍스트 노드 : 3
+                                * 주석 노드 : 8
+                                * 문서 노드 : 9
+            */
+
+            let item1 = document.getElementById('item1');
+
+            console.log(item1.nodeName);
+            console.log(item1.attributes[0].nodeValue);
+            // console.log( item1.class );
+            console.log(item1.nodeValue);
+            console.log(item1.firstChild.nodeValue);
+            // console.log( item1.lastChild.firstChild.nodeValue );
+            console.log(item1.nodeType);
+            console.log(item1.firstChild.nodeType);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>제목입니다.</h1>
+
+        <ul class="list">
+            <li><a href="">리스트1</a></li>
+            <li><a href="">리스트2</a></li>
+            <li><a href="">리스트3</a></li>
+            <li><a href="">리스트4</a></li>
+        </ul>
+    </div>
+    <section><img src="" alt="이미지1"><img src="" alt="이미지2"><img src="" alt="이미지3"></section>
+    <section>
+        <div class="item" id="item1">아이템1</div>
+        <div class="item" id="item2">아이템2</div>
+        <div class="item" id="item3">아이템3</div>
+        <div class="item" id="item4">아이템4</div>
+    </section>
+</body>
+
+</html>

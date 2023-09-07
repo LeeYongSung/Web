@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 기본형</title>
+    <script>
+        // 객체 생성
+        // let 객체명 = new Object()
+        let student = new Object();
+        // 속성 정의
+        student.name = '김조은';
+        student.age = 20;
+        student.major = '컴퓨터공학과';
+        // 메소드 정의
+        student.print = function() {
+            return `${this.name} : ${this.age} : ${this.major}`
+        }
+
+        document.write(`<h3>이름 : ${student.name}</h3>`);
+        document.write(`<h3>나이 : ${student.age}</h3>`);
+        document.write(`<h3>전공 : ${student.major}</h3>`);
+        document.write(student.print());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

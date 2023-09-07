@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 준비 이벤트</title>
+    <script>
+        // body 태그가 아직 로딩되지 않았기 때문에 HTML 요소 접근 불가
+        document.body.innerHTML = '<h1>Hello DOM~!</h1>';
+    </script>
+</head>
+<body>
+    
+
+    <!-- 
+        자바스크립트로 html 요소를 조작할 때는,
+        일반적으로 body 태그 맨 끝에 <script>를 작성한다.
+     -->
+    <script>
+        // body 요소의 내용을 h1으로 변경
+        document.body.innerHTML = '<h1>Hello DOM~!</h1>';
+    </script>
+</body>
+</html>

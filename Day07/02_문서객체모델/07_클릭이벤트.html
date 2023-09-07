@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 이벤트</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let btn = document.querySelector('button');
+            let count = 0;
+            let $count = document.querySelector('#count');
+            $count.textContent = count // 초기값 : 0
+            btn.addEventListener('click', (event) => {
+                // alert('클릭!');
+                $count.textContent = ++count;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>클릭 : <span id="count"></span></h1>
+    <button>클릭</button>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스</title>
+    <script>
+        // 클래스 선언
+        class Car {
+            
+            // 생성자
+            constructor(name, price=2000) {
+                this.name = name;
+                this.price = price;
+            }
+
+            // 메소드
+            showInfo() {
+                let result = `${this.name} : ${this.price} <br>`;
+                return result;
+            }
+        }
+
+        // 객체 생성
+        let car = new Car('제네시스');
+        document.write(car.showInfo());
+
+        let car2 = new Car('제네시스', 5000)
+        document.write(car2.showInfo());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

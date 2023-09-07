@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 선택 - selector</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 선택자로 요소 선택 : querySelector()
+            const ul = document.querySelector('.product-list>ul');
+            ul.style.listStyleType = 'none';
+
+            // 선택자로 여러 요소 선택  : querySelectorAll()
+            const lists = document.querySelectorAll('.product-list>ul>li');
+
+            lists.forEach((list, i) => {
+                // 요소.children            : 해당 요소의 자식요소들을 가진 속성
+                // list.children[0]         : li 태그 자식요소 중 0번째 -> 여기서는 img
+                list.children[0].src = 'img/product.jpg';
+                list.children[0].style.width = '300px';
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <div class="product-list">
+        <ul>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </div>
+
+</body>
+</html>

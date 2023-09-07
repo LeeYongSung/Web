@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트스타일 변경</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // querySelectorAll('선택자') : 선택자로 지정하여 여러 요소를 가져오는 메소드
+            const headers = document.querySelectorAll('h1');
+
+            headers.forEach(function(h1, i) {
+                h1.textContent = `${i+1}. 제목`;
+                h1.style.color = 'white';
+                h1.style.backgroundColor = 'black';
+                h1.style.padding = '20px';
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+</body>
+</html>

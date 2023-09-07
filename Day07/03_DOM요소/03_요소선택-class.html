@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 선택 - class</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // class로 요소 선택 : getElementsByClassName()
+            const items = document.getElementsByClassName('item');
+
+            items[0].style.width = '200px';
+            items[0].style.height = '200px';
+            items[0].style.backgroundColor = 'cornflowerblue';
+
+            items.item(1).style.width = '200px';
+            items.item(1).style.height = '200px';
+            items.item(1).style.backgroundColor = 'royalblue';
+
+        });
+    </script>
+</head>
+<body>
+    <div class="item"></div>
+    <div class="item"></div>
+</body>
+</html>

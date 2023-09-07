@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속</title>
+    <script>
+        class Car {
+            
+            // 생성자
+            constructor(name, price=2000) {
+                this.name = name;
+                this.price = price;
+            }
+
+            // 메소드
+            showInfo() {
+                let result = `${this.name} : ${this.price} <br>`;
+                return result;
+            }
+        }
+
+        // 상속
+        class SuperCar extends Car {
+            constructor(name, price, speed) {
+                super(name, price);     // 부모 클래스의 생성자 호출
+                this.speed = speed;
+            }
+
+            // 메소드
+            showInfo() {
+                let result = super.showInfo() + ' - ' + this.speed;
+                return result
+            }
+        }
+
+        let superCar = new SuperCar('슈퍼카', 30000, 400);
+        document.write( superCar.showInfo() );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

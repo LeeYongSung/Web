@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입</title>
+    <script>
+        // 프로토타입
+        // - 모든 객체가 프로토타입이라는 객체를 갖는다
+        // - 해당 객체가 상속되는 정보를 제공하는 객체
+
+        // 프로토타입 객체 생성 (생성자 함수로 객체 생성)
+        // - 객체 생성자 함수를 정의하여 프로토타입을 정의
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // 객체 생성
+        let person = new Person('김조은', 20);
+
+        // 객체 속성(프로퍼티) 접근
+        document.write(`이름 : ${person.name} <br>`)
+        document.write(`나이 : ${person.age} <br>`)
+        
+        // 객체 속성(프로퍼티) 삭제
+        delete person.age;
+        
+        document.write(`나이 : ${person.age} <br>`)
+        
+        let person2 = new Person('박조은', 30);
+        document.write(`이름 : ${person2["name"]} <br>`)
+        document.write(`나이 : ${person2["age"]} <br>`)
+
+        // 객체 생성 후, 메소드 추가
+        person2.printInfo = function() {
+            return this.name + '(' + this.age + ')';
+        }
+
+        // 객체 생성 후, 속성 추가
+        person2.title = '새로운 프로퍼티';
+
+        document.write(person2.printInfo() + '<br>');
+        document.write('person2.title : ' + person2.title + '<br>');
+        
+        document.write('person.title : ' + person.title + '<br>');
+
+        // person.test();
+        // 프로토타입 메소드 추가
+        Person.prototype.getInfo = function() {
+            document.write(`- 이름 : ${this.name} <br>
+                            - 나이 : ${this.age} <br>`);
+        }
+
+        person.getInfo();
+        person2.getInfo();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

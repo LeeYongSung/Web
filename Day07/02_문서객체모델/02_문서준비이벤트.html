@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 준비 이벤트</title>
+    <script>
+        // addEventListener('이벤트 타입', 콜백함수)
+        // :html 요소에 이벤트를 등록하는 함수
+        // DOMContentLoaded : 문서 객체 모델이 로딩됐을 때, 실행되는 이벤트
+        document.addEventListener('DOMContentLoaded', function() {
+            // 문서가 모두 로딩된 후에 실행
+            document.getElementById('title').innerHTML = '문서 준비 완료';
+        });
+    </script>
+</head>
+<body>
+    <h1 id="title"></h1>
+
+</body>
+</html>

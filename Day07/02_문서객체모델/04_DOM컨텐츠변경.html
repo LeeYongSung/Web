@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 컨텐츠 변경</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        #item1 { color: red;}
+        #item2 { color : rgb(208, 255, 0);}
+        #item3 { color : pink;}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('item1').innerHTML = `<h1>제목1</h1>`;
+            document.getElementById('item2').innerText = `<h1>제목1</h1>`;
+            document.getElementById('item3').textContent = `<h1>제목1</h1>`;
+            document.getElementById('item4').textContent = `<h1>제목1</h1>`;
+            document.getElementById('item5').textContent = `<h1>제목1</h1>`;
+
+            console.log(document.getElementById('item1').innerHTML);
+            console.log(document.getElementById('item2').innerText);
+            console.log(document.getElementById('item3').textContent);
+            console.log(document.getElementById('item4').textContent);
+            console.log(document.getElementById('item5').textContent);
+        });
+
+        /* 
+            inneetHTML : HTML 요소를 가져오거나 지정할 수 있는 속성
+            innerText : 요소의 텍스트를 가져오거나 지정할 수 있는 속성
+                        - css 스타일 렌더링한 숨겨진 컨텐츠는 가져오지 않는다.
+            textContent : 요소의 텍스트를 가져오거나 지정할 수 있는 속성
+                        - 모든 요소의 텍스트를 가져온다
+        */
+    </script>
+</head>
+<body>
+    <div id="item1"></div>
+    <div id="item2"></div>
+    <div id="item3"></div>
+
+    <h3 id="item4">아이템4</h3>
+    <h3 id="item5">아이템5</h3>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트스타일 변경</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // querySelector('선택자') : 요소를 선택자로 지정하여 가져오는 메소드
+            const h1 = document.querySelector('h1');
+
+            h1.textContent = '문서 객체 모델을 통해 텍스트 변경';
+            h1.style.color = 'yellow';
+            h1.style.backgroundColor = 'black';
+            h1.style.padding = '20px';
+        });
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

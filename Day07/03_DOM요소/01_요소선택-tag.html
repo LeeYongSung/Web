@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 선택 - tag</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 태그 이름으로 요소 선택 : getElementByTagBama()
+            // li 태그들을 선택
+            const cafeList = document.getElementsByTagName('li');
+
+            for (let i = 0; i < cafeList.length; i++) {
+                // item(인덱스) : 인덱스로 목록의 요소를 접근
+                cafeList.item(i).style.color = 'blue';
+                // cafeList[i]
+                
+            }
+        });
+    </script>
+</head>
+<body>
+    <ul class="cafe-list">
+        <li>아메리카노</li>
+        <li>카페라떼</li>
+        <li>카페모카</li>
+        <li>바닐라라떼</li>
+    </ul>
+</body>
+</html>

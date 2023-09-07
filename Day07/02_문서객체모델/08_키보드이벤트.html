@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자수 세기</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea');
+            const ul = document.querySelector('ul');
+            const count = document.querySelector('#count');
+
+            // 키보드 이벤트
+            textarea.addEventListener('keyup', (event) => {
+                // 글자 수
+                const length = textarea.value.length;
+                count.textContent = length;
+
+                // keyCode
+                console.log(event.keyCode);
+
+                if(event.keyCode == '13') {
+                    const text = textarea.value;
+                    const li = document.createElement('li');
+                    li.textContent = text;
+                    ul.appendChild(li);     // <ul> 자식요소로 <li> 요소 추가
+
+                    textarea.value = '';    // 입력 메시지를 비움
+                    count.textContent = 0;  // 글자수 : 0 으로 초기화
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    
+    <ul></ul>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <h2>글자수 : <span id="count"></span></h2>
+
+</body>
+</html>

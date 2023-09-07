@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소생성</title>
+    <script>
+        // write() 메소드로 요소 생성하기
+        document.write('<h1>요소 생성</h1>');
+
+        // createElement() 메소드로 요소 생성하기
+        const h3 = document.createElement('h3');
+        h3.textContent = '이름을 작성해주세요.';
+
+        // 자식 요소 추가하기
+        // 선택요소.appendChild(추가할 요소)
+        document.body.appendChild(h3);
+
+        // 문서 준비 이벤트
+        document.addEventListener('DOMContentLoaded', () => {
+            const ul = document.getElementById('list');
+            // 요소 생성
+            const li = document.createElement('li');    // <li> 생성
+            // 텍스트 노드 생성
+            const text = document.createTextNode('메가커피');
+            // 속성 생성 : style=""
+            const textStyle = document.createAttribute('style');
+            textStyle.value = 'color : brown';
+
+            // 속성 노드를 지정 : setAttributeNode()
+            li.setAttributeNode(textStyle);
+
+            // appendChild()    : 자식 요소로 노드를 1개 추가
+            // append()         : 여러 요소 및 텍스트 추가
+            li.appendChild(text);   // li : <li>메가커피</li>
+            li.append('입니다.')    // li : <li>메가커피입니다.</li>
+            ul.appendChild(li)      // <ul><li>메가커피이비낟.</li></ul>
+
+            const btnCreate = document.getElementById('create');    // 추가
+            const btnRemove = document.getElementById('delete');    // 삭제
+            const input = document.getElementById('input');
+
+            // 이벤트 핸들러 추가
+            btnCreate.addEventListener('click', addList);
+            btnRemove.addEventListener('click', removeList);
+            input.addEventListener('keyup', enter);
+
+            
+        });
+
+        // 리스트 추가하기
+        function addList() {
+            const ul = document.getElementById('list');
+            const li = document.createElement('li');            // <li></li>
+            const input = document.getElementById('input');
+            const text = document.createTextNode(input.value);
+
+            li.appendChild(text);       // <li>입려내용</li>
+            ul.appendChild(li);         // <ul><li>입려내용</li></ul>
+            input.value='';             // 추가 후 입력상자 비우기
+            // alert('추가');
+        }
+
+        // 리스트 삭제하기
+        function removeList() {
+            const ul = document.querySelector('#list');
+            const lists = document.querySelectorAll('#list li');
+
+            // 선택요소.removeChild( 자식 요소 )
+            // : 선택요소의 지정한 자식요소를 삭제한다.
+            ul.removeChild(lists[0]);
+            
+            // 선택요소.remove()
+            // : 모든 자식요소 삭제
+            // ul.remove()
+        }
+
+        // 엔터 입력
+        function enter(event) {
+            if(event.keyCode == 13)
+            addList();
+            if(event.keyCode == 46)
+            removeList();
+        }
+    </script>
+</head>
+<body>
+    <hr>
+    <ul id="list"></ul>
+
+    <input type="text" name="input" id="input" placeholder="입력하세요">
+    <button id="create">추가</button>
+    <button id="delete">삭제</button>
+</body>
+</html>
