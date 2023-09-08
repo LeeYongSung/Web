@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () =>{
+            // screen : 디스플레이의 화면에 대한 정보 
+            // 사용자 화면의 크기
+            document.write(`<h3>현재 사용자 화면 가로 크기 : ${screen.width}</h3>`)
+            document.write(`<h3>현재 사용자 화면 세로 크기 : ${screen.height}</h3>`)
+            
+            // 실제 사용가능한 크기
+            document.write(`<h3>사용 가능 화면 가로 크기 : ${screen.availWidth}</h3>`)
+            document.write(`<h3>사용 가능 화면 세로 크기 : ${screen.availHeight}</h3>`)
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

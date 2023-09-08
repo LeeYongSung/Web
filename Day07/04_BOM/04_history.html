@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () =>{
+            let $back = document.getElementById('back');
+            let $forward = document.getElementById('forward');
+            let $main = document.getElementById('main');
+            let $go = document.getElementById('go');
+
+            // 뒤로가기
+            $back.addEventListener('click', () => {
+                history.back();
+            });
+
+            // 앞으로가기
+            $forward.addEventListener('click', () => {
+                history.forward();
+            });
+
+            // 메인
+            $main.addEventListener('click', () => {
+                location.assign('./index.html')
+            });
+
+            // 기록 이동
+            $go.addEventListener('click', () => {
+                let number = document.getElementById('number').value;
+                // alert(number);
+                history.go(number);
+                // go(숫자)
+                // * -2 : 뒤로 2페이지 이동
+                // * +2 : 앞으로 2페이지 이동
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="btn_box">
+        <button id="main">메인</button>
+        <button id="back">뒤로가기</button>
+        <button id="forward">앞으로가기</button>
+        <input type="number" id="number" >
+        <button id="go">기록 이동하기</button>
+    </div>
+</body>
+</html>

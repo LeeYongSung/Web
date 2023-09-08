@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+    <script>
+        document.write(`<h3>현재 주소 : ${location.href}</h3>`);
+        document.write(`<h3>호스트 이름 : ${location.hostname}</h3>`);
+        document.write(`<h3>경로 : ${location.pathname}</h3>`);
+        document.write(`<h3>프로토콜 : ${location.protocol}</h3>`);
+
+        // location
+        // : 현재 페이지에 대한 위치정보를 객체
+        document.addEventListener("DOMContentLoaded", () => {
+            let $move = document.getElementById('move');
+            let $refresh = document.getElementById('refresh');
+
+            // 페이지 이동
+            $move.addEventListener('click', function() {
+                // location.href = 'http://www.naver.com';
+                // location.href = './index.html';          // 페이지 이동
+                location.assign ('./index.html');           // 페이지 이동
+                // location.replace ('./index.html');       // 페이지 변경(뒤로가기 불가) - 재구성
+            });
+
+            // 새로고침
+            $refresh.addEventListener('click', () => {
+                location.reload();
+            });
+
+
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="btn_box">
+            <button id="move">페이지 이동</button>
+            <button id="refresh">새로고침</button>
+        </div>
+    </div>
+</body>
+</html>
