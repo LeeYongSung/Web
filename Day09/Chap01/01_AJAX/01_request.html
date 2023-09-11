@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX 로 요청하기</title>
+</head>
+<body>
+    
+    <h1>AJAX 요청하기</h1>
+    <h3>게시글 조회</h3>
+    <label for="boardNo">게시글번호</label>
+    <input type="text" name="boardNo" id="boardNo">
+    <button onclick="getBoard()">조회</button>
+
+    <hr>
+
+    <div>
+        <h3><span>제목 : </span><span id="title"></span></h3>
+        <h5><span>작성자 : </span><span id="writer"></span></h5>
+        <textarea name="" id="content" cols="50" rows="10" readonly></textarea>
+    </div>
+
+    <hr>
+
+    <h3>게시글 쓰기</h3>
+    <h4>FORM 전송(동기식) | AJAX 전송(비동기식)</h4>
+    <form action="//192.168.30.119:8080/api/board" method="post">
+        <table>
+            <tr>
+                <td><label for="title">제목</label></td>
+                <td><input type="text" name="title" id="input-title"></td>
+            </tr>
+            <tr>
+                <td><label for="writer">작성자</label></td>
+                <td><input type="text" name="writer" id="input-writer"></td>
+            </tr>
+            <tr>
+                <td><label for="content">내용</label></td>
+                <td>
+                    <textarea name="content" id="input-content" cols="50" rows="10"></textarea>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="FORM 전송">
+        <button type="button" onclick="insertJSON();">AJAX 요청(JSON)</button>
+        <button type="button" onclick="insertXML();">AJAX 요청(XML)</button>
+    </form>
+
+    <hr>
+
+    <h3>게시글 수정</h3>
+    <h4>FORM 전송(동기식) | AJAX 전송(비동기식)</h4>
+    <form action="//192.168.30.119:8080/api/board/update" method="post">
+        <table>
+            <tr>
+                <td><label for="boardNo">게시글 번호</label></td>
+                <td><input type="text" name="boardNo" id="update-boardNo"></td>
+            </tr>
+            <tr>
+                <td><label for="title">제목</label></td>
+                <td><input type="text" name="title" id="update-title"></td>
+            </tr>
+            <tr>
+                <td><label for="writer">작성자</label></td>
+                <td><input type="text" name="writer" id="update-writer"></td>
+            </tr>
+            <tr>
+                <td><label for="content">내용</label></td>
+                <td>
+                    <textarea name="content" id="update-content" cols="50" rows="10"></textarea>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="FORM 전송">
+        <button type="button" onclick="updateJSON();">AJAX 요청(JSON)</button>
+        <button type="button" onclick="updateXML();">AJAX 요청(XML)</button>
+    </form>
+
+    <hr>
+
+    <h3>게시글 삭제</h3>
+    <h4>FORM 전송(동기식) | AJAX 전송(비동기식)</h4>
+    <form action="//192.168.30.119:8080/api/board/delete" method="post">
+        <table>
+            <tr>
+                <td><label for="boardNo">게시글 번호</label></td>
+                <td><input type="text" name="boardNo" id="delete-boardNo"></td>
+            </tr>
+        </table>
+        <input type="submit" value="FORM 전송">
+        <button type="button" onclick="deleteJSON();">AJAX 요청(JSON)</button>
+        <button type="button" onclick="deleteXML();">AJAX 요청(XML)</button>
+    </form>
+
+    <hr>
+
+    <h3>게시글 목록</h3>
+    <table border="1" id="board-list">
+        <tr id="board-title">
+            <th width="50">번호</th>
+            <th width="300">제목</th>
+            <th width="100">작성자</th>
+            <th width="200">등록일자</th>
+            <th width="200">수정일자</th>
+        </tr>
+        <tr id="board-data">
+            <td colspan="5" align="center">조회된 내역이 없습니다.</td>
+        </tr>
+    </table>
+    <script>
+        function getBoard() {
+            // XMLHttpRequest 객체 생성
+            let request = new XMLHttpRequest();
+    
+            // 응답 확인
+            request.onreadystatechange = function () {
+                // request.readyState : 클라이언트의 준비 상태 변수
+                // - UNSENT     : open() 호출 전
+                // - OPENED     : open() 호출된 상태
+                // - LOADING    : 응답 데이터를 가져오고 있는 상태
+                // - DONE       : 요청 완료
+    
+                // request.status       : 응 답 상태 코드
+                // ex) 200, 404, 500
+                // 요청 완료 시, 성공적으로 처리되었을 때
+                let response = '';
+    
+                if(request.readyState == request.DONE && request.status == 200 ) {
+                    // reqyest.responseText : 응답 데이터
+                    /* 
+                        {"boardNo":10,"title":"제목","writer":"작성자","content":"내용","regDate":"2023-09-11T04:07:11.197+00:00","updDate":"2023-09-11T04:07:11.197+00:00"}
+                    */
+                    response = request.responseText;
+                    
+                    if( response == '') {
+                        alert('데이터가 없습니다.');
+                    } else {
+                        // console.log(response);
+                        let board = JSON.parse(response);
+        
+                        // document.write(`title : ${board.title} <br>`)
+                        // document.write(`writer : ${board.writer} <br>`)
+                        // document.write(`content : ${board.content} <br>`)
+    
+                        let title = document.getElementById("title");
+                        let writer = document.getElementById("writer");
+                        let content = document.getElementById("content");
+    
+                        title.textContent = board.title;
+                        writer.textContent = board.writer;
+                        content.textContent = board.content;
+                    }
+                }
+    
+            }
+            
+            let boardNo = document.getElementById('boardNo').value;
+            let url = "http://192.168.30.119:8080/api/board?boardNo=" + boardNo;
+    
+            // 요청 설정
+            // request.open("요청메소드", url, 비동기 여부);
+            request.open("GET", url, true);
+    
+            // 요청 헤더 지정
+            // setRequestHeader("헤더속성", "값");
+            // request.setRequestHeader("Content-Type", "application/json");
+
+            // 요청 전송
+            // request.send(데이터);
+            request.send();
+        }
+
+            // 게시글 쓰기 요청 - JSON
+            function insertJSON() {
+
+                let request = new XMLHttpRequest();
+
+                // 입력 정보
+                let title = document.getElementById('input-title').value;
+                let writer = document.getElementById('input-writer').value;
+                let content = document.getElementById('input-content').value;
+                
+                // JSON
+                let data = {
+                    'title' : title,
+                    'writer' : writer,
+                    'content' : content
+                }
+
+                // 응답 확인
+                request.onreadystatechange = function() {
+                    // 요청 성공
+                    if(request.readyState == request.DONE && request.status == 200) {
+                        let response = request.responseText;
+                        alert(response);
+                    }
+
+                    // 에러 발생
+                    if(request.readyState == request.DONE && request.status == 500) {
+                        alert('서버측 에러 발생');
+                    }
+                }
+                
+                // 요청 설정
+                let url = 'http://192.168.30.119:8080/api/board';
+
+                request.open("POST", url, true);
+                request.setRequestHeader("Content-Type", "application/json");
+
+                // JSON.stringify() : JavaScript 의 객체를 JSON 문자열로 변환하는 메소드
+                request.send( JSON.stringify(data));
+            }
+
+            // 게시글 쓰기 요청 - XML
+            function insertXML() {
+
+                let request = new XMLHttpRequest();
+
+                // 입력 정보
+                let title = document.getElementById('input-title').value;
+                let writer = document.getElementById('input-writer').value;
+                let content = document.getElementById('input-content').value;
+                
+                // XML
+                let data = 
+                            `
+                            <Board>
+                            <title>${title}</title>
+                            <writer>${writer}</writer>
+                            <content>${content}</content>
+                            </Board>
+                            `
+
+                // 응답 확인
+                request.onreadystatechange = function() {
+                    // 요청 성공
+                    if(request.readyState == request.DONE && request.status == 200) {
+                        let response = request.responseText;
+                        alert(response);
+                    }
+
+                    // 에러 발생
+                    if(request.readyState == request.DONE && request.status == 500) {
+                        alert('서버측 에러 발생');
+                    }
+                }
+                
+                // 요청 설정
+                let url = 'http://192.168.30.119:8080/api/board';
+
+                request.open("POST", url, true);
+                request.setRequestHeader("Content-Type", "application/xml");
+
+                request.send(data);
+            }
+
+            // 게시글 수정 요청 - JSON
+            function updateJSON() {
+
+                let request = new XMLHttpRequest();
+
+                // 입력 정보
+                let boardNo = document.getElementById('update-boardNo').value;
+                let title = document.getElementById('update-title').value;
+                let writer = document.getElementById('update-writer').value;
+                let content = document.getElementById('update-content').value;
+
+                // JSON
+                let data = {
+                    'boardNo' : boardNo,
+                    'title' : title,
+                    'writer' : writer,
+                    'content' : content
+                }
+
+                // 응답 확인
+                request.onreadystatechange = function() {
+                    // 요청 성공
+                    if(request.readyState == request.DONE && request.status == 200) {
+                        let response = request.responseText;
+                        alert(response);
+                    }
+
+                    // 에러 발생
+                    if(request.readyState == request.DONE && request.status == 500) {
+                        alert('서버측 에러 발생');
+                    }
+                }
+
+                // 요청 설정
+                let url = 'http://192.168.30.119:8080/api/board';
+
+                request.open("PUT", url, true);
+                request.setRequestHeader("Content-Type", "application/json");
+
+                // JSON.stringify() : JavaScript 의 객체를 JSON 문자열로 변환하는 메소드
+                request.send( JSON.stringify(data));
+            }
+
+            // 게시글 수정 요청 - XML
+            function updateXML() {
+
+                let request = new XMLHttpRequest();
+
+                // 입력 정보
+                let boardNo = document.getElementById('update-boardNo').value;
+                let title = document.getElementById('update-title').value;
+                let writer = document.getElementById('update-writer').value;
+                let content = document.getElementById('update-content').value;
+
+                // XML
+                let data = 
+                            `
+                            <Board>
+                            <boardNo>${boardNo}</boardNo>
+                            <title>${title}</title>
+                            <writer>${writer}</writer>
+                            <content>${content}</content>
+                            </Board>
+                            `
+
+                // 응답 확인
+                request.onreadystatechange = function() {
+                    // 요청 성공
+                    if(request.readyState == request.DONE && request.status == 200) {
+                        let response = request.responseText;
+                        alert(response);
+                    }
+
+                    // 에러 발생
+                    if(request.readyState == request.DONE && request.status == 500) {
+                        alert('서버측 에러 발생');
+                    }
+                }
+
+                // 요청 설정
+                let url = 'http://192.168.30.119:8080/api/board';
+
+                request.open("PUT", url, true);
+                request.setRequestHeader("Content-Type", "application/xml");
+
+                request.send(data);
+            }
+
+            // 게시글 삭제 요청 - JSON
+            function deleteJSON() {
+
+                let request = new XMLHttpRequest();
+
+                // 입력 정보
+                let boardNo = document.getElementById('delete-boardNo').value;
+
+                // JSON
+                let data = {
+                    'boardNo' : boardNo
+                }
+
+                // 응답 확인
+                request.onreadystatechange = function() {
+
+                    // 요청 성공
+                    if(request.readyState == request.DONE && request.status == 200) {
+                        let response = request.responseText;
+                        alert(response);
+                    }
+
+                    // 에러 발생
+                    if(request.readyState == request.DONE && request.status == 500) {
+                        alert('서버측 에러 발생');
+                    }
+                }
+
+                // 요청 설정
+                let url = 'http://192.168.30.119:8080/api/board';
+
+                request.open("DELETE", url, true);
+                request.setRequestHeader("Content-Type", "application/json");
+
+                // JSON.stringify() : JavaScript 의 객체를 JSON 문자열로 변환하는 메소드
+                request.send( JSON.stringify(data));
+            }
+
+            // 게시글 삭제 요청 - XML
+            function deleteXML() {
+
+                let request = new XMLHttpRequest();
+
+                // 입력 정보
+                let boardNo = document.getElementById('delete-boardNo').value;
+
+                // XML
+                let data = 
+                            `
+                            <Board>
+                            <boardNo>${boardNo}</boardNo>
+                            </Board>
+                            `
+
+                // 응답 확인
+                request.onreadystatechange = function() {
+                    // 요청 성공
+                    if(request.readyState == request.DONE && request.status == 200) {
+                        let response = request.responseText;
+                        alert(response);
+                    }
+
+                    // 에러 발생
+                    if(request.readyState == request.DONE && request.status == 500) {
+                        alert('서버측 에러 발생');
+                    }
+                }
+
+                // 요청 설정
+                let url = 'http://192.168.30.119:8080/api/board';
+
+                request.open("DELETE", url, true);
+                request.setRequestHeader("Content-Type", "application/xml");
+
+                request.send(data);
+            }
+
+            function getList() {
+
+                let request = new XMLHttpRequest();
+                // 응답 확인
+                request.onreadystatechange = function () {
+
+                let response = '';
+    
+                if(request.readyState == request.DONE && request.status == 200 ) {
+                    response = request.responseText;
+                    
+                    // console.log('게시글 목록 데이터 : ');
+                    // console.log(response);
+
+                    // JSON.parse() : text --> JSON 변환
+                    let boardList = JSON.parse(response);
+
+                    //  데이터가 없을 때
+                    if( boardList.length == 0) {
+                        alert('조회된 내역이 없습니다.');
+
+                    // 데이터가 있을 때
+                    } else {
+                        let $boardData = document.getElementById('board-data');
+                        let $boardList = document.getElementById('board-list');
+
+                        $boardData.remove();
+
+                        for (const board of boardList) {
+                            let tr = 
+                                    `
+                                    <tr>
+                                        <td>${board.boardNo}</td>
+                                        <td>${board.title}</td>
+                                        <td>${board.writer}</td>
+                                        <td>${board.regDate}</td>
+                                        <td>${board.updDate}</td>
+                                    </tr>
+                                    `
+                                    $boardList.innerHTML += tr;
+                            }
+                        }
+                    }
+                }
+                
+                let url = "http://192.168.30.119:8080/api/board";
+
+                request.open("GET", url, true);
+                request.setRequestHeader("Content-Type", "application/json");
+                request.send();
+            }
+
+            getList();
+    </script>
+</body>
+</html>
